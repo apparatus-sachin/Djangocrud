@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container shadow p-5">
+	<h1 class="display-4">Edit Book Info </h1>
+<div class="form-group">
+<div class="container-fluid pt-3">
+	<div class="row">
+	<form action="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+		{% if book.bookimage %}
+		<img src="{{store.Books.bookimage.url}}" alt="" class="rounded" style="width: 10px">
+		{% endif %}
+		<label for="" class="form-label">bookimage:</label>
+		<input type="file" name="bookimage" class="form-control"><br>
+
+		<label for="" class="form-label">bookname:</label>
+		<input type="text" name="bookname" value="{{book.bookname}}"class="form-control"><br>
+
+		<label for="" class="form-label">releasedate:</label>
+		<input type="date" name="releasedate" value="{{book.releasedate}}" class="form-control"><br>
+
+		<label for="" class="form-label">about:</label>
+		<input type="text" name="about" value="{{book.about}}" class="form-control"><br>
+
+
+		<button type="submit" class="btn btn-warning">update</button>
+
+
+	</form>
+	</div>
+
+</div>
+</div>
+</div>
+{% endblock content %}

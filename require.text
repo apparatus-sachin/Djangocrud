@@ -1,0 +1,16 @@
+## included in project 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sublime_bookproject',
+        'USER':'root',
+        'PASSWORD':'root',
+        'HOST':'localhost',
+        'PORT':'3306'
+    }
+}
+
+1.jquerydatepicker
+2.django-3.2.7
+3.pip install pillow -media 
